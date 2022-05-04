@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // lấy hình, canvas, context của canvas bên html
+    var userImage = document.getElementById("source");
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+
+    // gán kích thước mặc định cho canvas
+    var canvasWidth = canvas.width = 500;
+    var canvasHeight = canvas.height = 500;
+
+    // cạnh nhỏ nhất
+    var minEdge = 0;
+    var imageScale = 1;
+    var minScale = 1;
+
+    // tọa độ hình
+    var imagePosX = 0;
+    var imagePosY = 0;
+
+    // góc xoay
+    var angleInDegrees = 0;
+
+    // tạo đối tượng khung hình để ghép
+    var frame = new Image;
+    frame.src = "https://www.google.com/search?q=anh+dep&rlz=1C1CHBD_viVN998VN998&sxsrf=ALiCzsZkDQ4c0Spd8ZHYhRWQkBpayfnAmw:1651628490864&tbm=isch&source=iu&ictx=1&vet=1&fir=OK8jCbadNe-Z1M%252CuuJKElgKSIzhdM%252C_%253B4MShbFZzDY0bVM%252CegPZkMn84D2LUM%252C_%253BGvS0Qa0LySjLlM%252CLyxSqm2ukReAPM%252C_%253B25yoZgpoG45jHM%252CP7R-ja0GaKuFlM%252C_%253BthEY01e1PbTFwM%252CIBIP-ketyEyhCM%252C_%253BCiOIvGLKfBudTM%252C-qSNPOe1c8Li7M%252C_%253BISlOzQv6xPGh7M%252CJrdqHB5FnkzNoM%252C_%253B9ms_V1tQgqkRxM%252C0yM5gYwGfmwZyM%252C_%253BvUPQfwjlHXx5pM%252CiZA2z4pjbK1YkM%252C_%253Bi5CNBw8ATXpF7M%252CIYmYVSgG93xnpM%252C_%253BEwexDYhggFqrMM%252CcoIa07_oZkew_M%252C_%253Bc85eZZcjha0-JM%252ClYEvv41ZDgY4YM%252C_&usg=AI4_-kR3A7e5D8EKfmkvSLxvKGdsMVGtKg&sa=X&ved=2ahUKEwifvP7L28T3AhXGmFYBHdYuCREQ9QF6BAgFEAE#imgrc=vUPQfwjlHXx5pM";
+
+    frame.onload = function() {
+        drawCurrentImage();
+    }
+</script>
+</body>
+</html>
